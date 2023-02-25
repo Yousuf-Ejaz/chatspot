@@ -1,4 +1,17 @@
-import { Box, Container, Text } from "@chakra-ui/react";
+import {
+	Box,
+	Container,
+	Tab,
+	TabList,
+	TabPanel,
+	TabPanels,
+	Tabs,
+	Text,
+} from "@chakra-ui/react";
+
+import Login from "../components/Authentication/Login";
+import SignUp from "../components/Authentication/SignUp";
+
 function Homepage() {
 	return (
 		<Container maxW="xl" centerContent>
@@ -13,13 +26,31 @@ function Homepage() {
 				borderWidth="1px"
 			>
 				<Text
-					fontSize="4xl"
+					fontSize="3xl"
 					as="b"
 					letterSpacing={4}
 					fontFamily="Poppins"
+					color={"blue.800"}
+					fontWeight={3}
 				>
 					CHATSPOT
 				</Text>
+			</Box>
+			<Box bg="white" w="100%" p={4} borderRadius="lg" borderWidth="1px">
+				<Tabs isFitted variant="soft-rounded">
+					<TabList mb="1em">
+						<Tab>Login</Tab>
+						<Tab>Sign Up</Tab>
+					</TabList>
+					<TabPanels>
+						<TabPanel>
+							<Login />
+						</TabPanel>
+						<TabPanel>
+							<SignUp />
+						</TabPanel>
+					</TabPanels>
+				</Tabs>
 			</Box>
 		</Container>
 	);
