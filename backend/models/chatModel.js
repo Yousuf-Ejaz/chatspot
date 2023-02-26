@@ -1,10 +1,5 @@
 const mongoose = require("mongoose");
 
-// isGroupChat
-// users[]
-// _id
-// chatName
-
 const chatSchema = mongoose.Schema(
 	{
 		isGroupChat: {
