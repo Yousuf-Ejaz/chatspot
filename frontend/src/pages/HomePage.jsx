@@ -11,8 +11,19 @@ import {
 
 import Login from "../components/Authentication/Login";
 import SignUp from "../components/Authentication/SignUp";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 function Homepage() {
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		const user = JSON.parse(localStorage.getItem("userInfo"));
+		if (user) {
+			navigate("/chats");
+		}
+	}, [navigate]);
+	
 	return (
 		<Container maxW="xl" centerContent>
 			<Box
