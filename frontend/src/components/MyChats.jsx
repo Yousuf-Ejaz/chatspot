@@ -5,11 +5,10 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { getSender } from "./config/ChatLogics";
 import ChatLoading from "./ChatLoading";
-// import GroupChatModal from "./miscellaneous/GroupChatModel"
+
 import { Button } from "@chakra-ui/react";
 import { ChatState } from "../context/ChatProvider";
 import GroupChatModal from "./miscellaneous/GroupChatModal";
-
 
 const MyChats = ({ fetchAgain }) => {
 	const [loggedUser, setLoggedUser] = useState();
@@ -50,7 +49,7 @@ const MyChats = ({ fetchAgain }) => {
 
 	return (
 		<Box
-			d={{ base: selectedChat ? "none" : "flex", md: "flex" }}
+			display={{ base: selectedChat ? "none" : "flex", md: "flex" }}
 			flexDir="column"
 			alignItems="center"
 			p={3}
@@ -71,13 +70,13 @@ const MyChats = ({ fetchAgain }) => {
 			>
 				My Chats
 				<GroupChatModal>
-				<Button
-					display="flex"
-					fontSize={{ base: "17px", md: "10px", lg: "17px" }}
-					rightIcon={<AddIcon />}
-				>
-					New Group Chat
-				</Button>
+					<Button
+						display="flex"
+						fontSize={{ base: "17px", md: "10px", lg: "17px" }}
+						rightIcon={<AddIcon />}
+					>
+						New Group Chat
+					</Button>
 				</GroupChatModal>
 			</Box>
 			<Box

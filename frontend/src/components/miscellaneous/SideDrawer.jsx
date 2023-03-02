@@ -28,9 +28,10 @@ import { Spinner } from "@chakra-ui/spinner";
 import ProfileModal from "./ProfileModal";
 // import NotificationBadge from "react-notification-badge";
 // import { Effect } from "react-notification-badge";
-// import { getSender } from "../../config/ChatLogics";
-import UserListItem from "../UserAvatar/UserListItem"
+import { getSender } from "../config/ChatLogics";
+
 import { ChatState } from "../../context/ChatProvider";
+import UserListItem from "../userAvatar/UserListItem";
 
 function SideDrawer() {
 	const [search, setSearch] = useState("");

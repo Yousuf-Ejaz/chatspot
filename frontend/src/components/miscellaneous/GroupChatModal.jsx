@@ -16,7 +16,7 @@ import {
 import axios from "axios";
 import { useState } from "react";
 import { ChatState } from "../../context/ChatProvider";
-// import UserBadgeItem from "../userAvatar/UserBadgeItem";
+import UserBadgeItem from "../userAvatar/UserBadgeItem";
 import UserListItem from "../userAvatar/UserListItem";
 
 const GroupChatModal = ({ children }) => {
@@ -162,19 +162,19 @@ const GroupChatModal = ({ children }) => {
 						</FormControl>
 						<FormControl>
 							<Input
-								placeholder="Add Users eg: John, Piyush, Jane"
+								placeholder="Add Users eg: John, Yousuf, Jane"
 								mb={1}
 								onChange={(e) => handleSearch(e.target.value)}
 							/>
 						</FormControl>
 						<Box w="100%" display="flex" flexWrap="wrap">
-							{/* {selectedUsers.map((u) => (
+							{selectedUsers.map((u) => (
 								<UserBadgeItem
 									key={u._id}
 									user={u}
 									handleFunction={() => handleDelete(u)}
 								/>
-							))} */}
+							))}
 						</Box>
 						{loading ? (
 							// <ChatLoading />
