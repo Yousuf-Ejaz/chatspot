@@ -29,9 +29,8 @@ import ProfileModal from "./ProfileModal";
 import NotificationBadge from "react-notification-badge";
 import { Effect } from "react-notification-badge";
 import { getSender } from "../config/ChatLogics";
-
-import { ChatState } from "../../context/ChatProvider";
 import UserListItem from "../userAvatar/UserListItem";
+import { ChatState } from "../../context/ChatProvider";
 
 function SideDrawer() {
 	const [search, setSearch] = useState("");
