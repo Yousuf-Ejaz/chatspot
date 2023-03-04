@@ -16,7 +16,7 @@ import io from "socket.io-client";
 import UpdateGroupChatModal from "./miscellaneous/UpdateGroupChatModal";
 import { ChatState } from "../context/ChatProvider";
 // const ENDPOINT = "http://localhost:5000";
-const ENDPOINT = "https://chatspot-api.onrender.com/";
+const ENDPOINT = "https://chatspot-production.up.railway.app";
 var socket, selectedChatCompare;
 
 const SingleChat = ({ fetchAgain, setFetchAgain }) => {
