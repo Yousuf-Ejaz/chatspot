@@ -19,8 +19,8 @@ import {
 import axios from "axios";
 import { useState } from "react";
 import { ChatState } from "../../context/ChatProvider";
-import UserBadgeItem from "../userAvatar/UserBadgeItem";
-import UserListItem from "../userAvatar/UserListItem";
+import UserBadgeItem from "./UserBadgeItem";
+import UserListItem from "./UserListItem";
 
 const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
 	const { isOpen, onOpen, onClose } = useDisclosure();
@@ -231,7 +231,11 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
 					</ModalHeader>
 
 					<ModalCloseButton />
-					<ModalBody display="flex" flexDir="column" alignItems="center">
+					<ModalBody
+						display="flex"
+						flexDir="column"
+						alignItems="center"
+					>
 						<Box w="100%" display="flex" flexWrap="wrap" pb={3}>
 							{selectedChat.users.map((u) => (
 								<UserBadgeItem
@@ -265,7 +269,6 @@ const UpdateGroupChatModal = ({ fetchMessages, fetchAgain, setFetchAgain }) => {
 							<Input
 								placeholder="Add User to group"
 								mb={1}
-                
 								onChange={(e) => handleSearch(e.target.value)}
 							/>
 						</FormControl>
