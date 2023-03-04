@@ -52,6 +52,7 @@ const io = require("socket.io")(server, {
 			"http://localhost:5000",
 			"http://127.0.0.1:5000",
 			"https://chatspot-production.up.railway.app",
+			"https://chatspot-prod.onrender.com",
 		],
 	},
 });
